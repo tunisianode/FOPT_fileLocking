@@ -37,14 +37,17 @@ public class File extends Thread
     {
         if (begin < 0 || end < 0 || begin > end || end > length)
         {
-            throw new IllegalArgumentException("Error bei Lock methode:  begin < 0 || end < 0 || begin > end || end " + ">" + " length");
+            throw new IllegalArgumentException("Error bei Lock methode:  begin < 0 || end < 0 || begin > end || end "
+                    + ">" + " length");
         }
 
         Intervall intervall = new Intervall(begin, end);
 
         for (Intervall item : IntervallList)
         {
-            if ((intervall.getStart() >= item.getStart() && intervall.getEnd() <= item.getEnd()) || (intervall.getStart() >= item.getStart() && intervall.getStart() <= item.getEnd()) || (intervall.getEnd() >= item.getStart() && intervall.getEnd() <= item.getEnd()))
+            if ((intervall.getStart() >= item.getStart() && intervall.getEnd() <= item.getEnd()) || (intervall
+                    .getStart() >= item.getStart() && intervall.getStart() <= item.getEnd()) || (intervall.getEnd()
+                    >= item.getStart() && intervall.getEnd() <= item.getEnd()))
             {
                 //throw new IllegalArgumentException("Uberlappung bei das Intervall [" + begin + "," + end + "]");
                 //                          Uberlappung
@@ -69,12 +72,7 @@ public class File extends Thread
         if (begin < 0 || end < 0 || begin > end || end > length)
         {
             throw new IllegalArgumentException("Error bei Lock methode:  begin < 0 " + "|| end < 0 || begin > end || " +
-                    "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + ""
-                    + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" +
-                    "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + ""
-                    + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" +
-                    "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "end "
-                    + "" + "" + ">" + " " + "" + "" + "length");
+                    "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "" + "end " + "" + "" + ">" + " " + "" + "" + "length");
         }
 
 
